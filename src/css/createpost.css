@@ -1,0 +1,55 @@
+.post-form {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 200px;
+    margin-block-start:35px ;
+    gap: 25px;
+}
+.post-heading {
+    align-self:flex-start;
+    /* margin-left:120px; */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.57px;
+
+}
+.form-control {
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 2px solid #dddddd;
+    font-size: 14px;
+    padding: 13px;
+    width: 100%;  
+    margin-top: 35px;
+    
+}
+.form-group {
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 2px solid #dddddd;
+    font-size: 14px;
+    padding: 13px;
+    width: 100%;    
+    margin-top: 35px;
+}
+.post-wrapper input[type= "file"]{
+    display: flex;
+    margin-block: 10px;
+    padding-top: 13px;
+    font-size: 18px;
+    border-style: none !important;
+    outline: none !important;
+    
+}
+.post-wrapper  button{
+    background-color: #743943;
+    border-style: none;
+    padding:  9px, 32px, 9px, 32px;
+    line-height: 19.36px;
+    text-transform: uppercase;
+    color: #ffffff;
+    height: 37px;
+    width: 129px;
+}

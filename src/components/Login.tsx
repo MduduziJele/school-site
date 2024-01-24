@@ -12,7 +12,7 @@ const Login: React.FC<LoginFormProps> = () => {
   const [error] = useState<string | null>(null);
 
   const handleLogin = () => {
-    fetch(`//school-site-api-production.up.railway.app/api/auth/signin`, {
+    fetch(`//localhost:8080/api/auth/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
