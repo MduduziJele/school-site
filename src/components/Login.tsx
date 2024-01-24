@@ -27,6 +27,7 @@ const Login: React.FC<LoginFormProps> = () => {
         }
       })
       .then((data) => {
+        sessionStorage.setItem("id", data.id)
         sessionStorage.setItem("token", data.jwtCookie.value)
         if(data.jwtCookie) navigate("/portal")
       })

@@ -5,7 +5,7 @@ const PortalSideNavbar = () => {
   const navigate = useNavigate();
 
   const handleSignOut = () => {
-    fetch(`//school-site-api-production.up.railway.app/api/auth/signout`, {
+    fetch(`//localhost:8080/api/auth/signout`, {
       method: "POST"
     })
       .then((res) => {
@@ -102,18 +102,18 @@ const PortalSideNavbar = () => {
               <path
                 d="M1 11C1 6.286 1 3.929 2.464 2.464C3.93 1 6.286 1 11 1C15.714 1 18.071 1 19.535 2.464C21 3.93 21 6.286 21 11C21 15.714 21 18.071 19.535 19.535C18.072 21 15.714 21 11 21C6.286 21 3.929 21 2.464 19.535C1 18.072 1 15.714 1 11Z"
                 stroke="white"
-                stroke-width="1.5"
+                strokeWidth="1.5"
               />
               <path
                 d="M15 9C16.1046 9 17 8.10457 17 7C17 5.89543 16.1046 5 15 5C13.8954 5 13 5.89543 13 7C13 8.10457 13.8954 9 15 9Z"
                 stroke="white"
-                stroke-width="1.5"
+                strokeWidth="1.5"
               />
               <path
                 d="M1 11.5L2.752 9.967C3.19114 9.58307 3.75974 9.38034 4.34272 9.39983C4.9257 9.41932 5.47949 9.65959 5.892 10.072L10.182 14.362C10.5149 14.6948 10.9546 14.8996 11.4235 14.9402C11.8925 14.9808 12.3608 14.8547 12.746 14.584L13.045 14.374C13.6006 13.9838 14.2721 13.7936 14.9498 13.8344C15.6275 13.8753 16.2713 14.1448 16.776 14.599L20 17.5"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               />
             </svg>
             <Link to="gallery">GALLERY</Link>
