@@ -1,17 +1,43 @@
+import { useEffect, useState } from "react";
 
+interface about{
+  aboutusext: string;
+  mission: string;
+  vision: string;
+}
 const AboutUs = () => {
+
+const [ about, setAbout ] = useState([])
+
+
+useEffect(() =>{
+  const getAbout = async () =>{
+    const AboutfromServer = await fetchAbout()
+    setAbout(AboutfromServer)
+  }
+  getAbout()
+},[])
+
+//fetch about from database
+const fetchAbout =async ()=>{
+  const response = await fetch(`http://localhost:8080/api/auth/about/1`)
+  const about = await response.json()
+  console.log(about);
+  return about;
+  
+}
+
   return (
     <div className="AboutUs">
       <div className="AboutUs-text">
         <h1>ABOUT US</h1>      
       </div>
       <div className="text-container">
-      <p >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa
-          quidem, molestias doloribus asperiores voluptate architecto natus,         
-          commodi nobis numquam nesciunt? Repellat libero provident quos soluta
-          corporis facilis hic omnis!
-        </p>
+        <div>
+         <p> {about.aboutustext}
+            </p>
+        </div>
+        
       </div>
       <div className="AboutUs-body">
         <div className="Mission-section">
@@ -21,10 +47,7 @@ const AboutUs = () => {
           <div className="Mission">
             <h3>Our Mission</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quos nam libero ducimus impedit accusantium ea ipsam tempore,
-              voluptas neque inventore atque dolorum! Fuga pariatur, voluptatem
-              voluptate perspiciatis similique culpa.
+             {about.mission}
             </p>
           </div>
         </div>
@@ -33,10 +56,7 @@ const AboutUs = () => {
           <div className="Vision">
             <h3>Our Vision</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quos nam libero ducimus impedit accusantium ea ipsam tempore,
-              voluptas neque inventore atque dolorum! Fuga pariatur, voluptatem
-              voluptate perspiciatis similique culpa.
+              {about.vision}
             </p>
           </div>
           <div className="vision__image">
