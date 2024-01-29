@@ -1,0 +1,46 @@
+.body-container{
+    padding-block: 47px;    
+    background: rgba(116, 57, 67, 0.50);
+
+}
+
+.section-one {
+    background-image: url(../assets/7f075833-4342-4f48-8395-96c19c2e6acc.jpg);
+    background-size: cover;
+    height: fit-content;
+    width: 100%;    
+    position: relative;
+   
+}
+.body-title p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.body-title{
+    padding-top: 200px;
+}
+
+
+.body-title h5{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}

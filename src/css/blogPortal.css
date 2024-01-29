@@ -1,0 +1,60 @@
+.blog {
+  height: 100%;
+}
+
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem 2rem 5rem;
+}
+
+.blog__header p {
+  font-size: 1.5rem;
+}
+
+.blog__header button {
+  width: 8rem;
+  height: 2.3rem;
+  background-color: #743943;
+  color: white;
+  border: 0;
+}
+
+.blog__cards {
+  display: flex;
+  padding: 0rem 2rem 0rem 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blog__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.blog__buttons button {
+  width: 3rem;
+  height: 2rem;
+  border: 0px;
+}
+
+.blog__buttons button:first-child {
+  background-color: #743943;
+  color: white;
+}
+
+.blog__buttons button:last-child {
+  background-color: #743943;
+  color: white;
+}
+
+.blog__buttons button:last-child {
+  background-color: #743943;
+  color: white;
+}
+
+.blog__button__3 {
+  background-color: #743943;
+  color: white;
+}

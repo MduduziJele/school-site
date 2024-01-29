@@ -1,0 +1,51 @@
+.side__nav__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #273a5c;
+  color: #fff;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.side__nav__container hr {
+  width: 100%;
+}
+
+.side__nav__container__main p {
+  text-align: center;
+}
+
+.side__nav__container__main__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  padding: .8rem 0rem .8rem 2rem;
+}
+
+.side__nav__container__main__list li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.side__nav__container__main__list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.side__nav__container__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.side__nav__container__buttons div {
+  display: flex;
+  align-items: center;
+  padding: .8rem 0rem .8rem 2rem;
+  gap: 1rem;
+  cursor: pointer;
+}

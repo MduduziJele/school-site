@@ -1,0 +1,46 @@
+.footer {  
+    background: #273A5C;
+    color: white;
+    padding: 1rem 5rem;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+  }
+  .follow-us__message {
+    font-size: 12px;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  .logo {
+    align-self: center;
+  }
+  .facebook-icons , .twitter-icons, .instagram-icons{
+    font-size: 19px;  
+  }
+  .twitter-icons {
+    fill: rgb(0, 170, 255);
+  }
+  .contact :not(:first-child) {
+    font-size: 12px;
+  }
+  .footer-text {
+    text-align: center;
+  }
+  @media(max-width : 768px) {
+    .footer-content {
+      flex-direction: column;
+      
+    }
+    .follow-us__message {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .social-icons {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }

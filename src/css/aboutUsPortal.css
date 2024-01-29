@@ -1,0 +1,36 @@
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__title {
+    font-size: 1.5rem;
+    padding: 1.5rem 5rem;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 5rem 0rem 5rem;
+}
+
+.about__content p {
+    font-size: 1rem;
+    padding: 1rem 0rem 1rem;
+}
+
+.about__content input {
+    height: 7rem;
+    background-color: #D9D9D9;
+    border: 0px;
+}
+
+.about__content button {
+    height: 2.5rem;
+    background-color: #743943;
+    width: 5rem;
+    color: white;
+    border: 0px;
+    margin-top: 1rem;
+    align-self: flex-end;
+}

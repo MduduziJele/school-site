@@ -1,0 +1,34 @@
+.login {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #273a5c;
+}
+
+.login__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__content h2 {
+    text-align: center;
+}
+
+.login__content input {
+    width: 20rem;
+    height: 2.5rem;
+    padding-left: .8rem;
+    background-color: #273a5c;
+    border: 1px solid white;
+}
+
+.login__content button {
+    width: 20rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #273a5c;
+    border: 1px solid white;
+}

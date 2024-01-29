@@ -1,0 +1,141 @@
+
+  
+ 
+  .custom-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #ccc;
+    padding: 0; 
+   
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #ccc;   
+    padding: 0;
+  }
+  
+  .custom-table th:first-child,
+  .custom-table td:first-child {
+    width: 15%;
+  }
+
+ 
+  .custom-table th:not(:first-child),
+  .custom-table td:not(:first-child) {
+    width: 42.5%; 
+  }
+  
+  .custom-table input[type="text"],
+  .custom-table input[type="number"] {
+    width: 100%; 
+    border: none; 
+    padding: 8px; 
+    box-sizing: border-box; 
+  }
+  
+  .percentage-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .percentage-input input[type="number"] {
+    flex: 1;
+  }
+  
+  
+  .row-number {
+    width: 10px; 
+    text-align: center;
+    padding: 0; 
+    background-color: grey;
+  }
+  
+  .two-column-layout {
+   max-width: 80%;
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   margin: 0 auto;
+   gap: 2rem;
+  }
+  @media(max-width : 768px) {
+    .two-column-layout {
+      grid-template-columns: 1fr;      
+    }
+    
+  }
+  .left-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-column button{
+    margin:40px;
+    /* margin-left: 260PX;     */
+    align-self: center;
+    border-radius: 0%;
+    background-color:#743943;
+  
+  }
+
+  .aps-calculator {
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding-block: 5.5em;
+    width: 100%;
+  }
+
+  .aps-calculator-headings {
+    position: relative;    
+  }
+
+  .aps-calculator-headings h1 {
+   line-height: 43.57px;
+   font-weight: 400;
+   font-size: 36px;
+    text-align: center;
+    color: #743943;
+  }
+
+  .aps-calculator-headings::before {
+    content: '';
+    position: absolute;
+    border: 3px solid #743943;
+    width: 68px;
+  }
+  .left-column button {
+    height: 39px;
+    width: 202px;
+    color: #fff;
+    border-style: none;
+    padding: 10px, 54px, 10px, 54px;
+  }
+  .aps-calculator-headings::before {
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .message {
+    width: min(700px , 70%);
+  }
+  .message p{
+    font-size: 16px;
+    line-height: 14.52px ;
+    margin: 5rem auto;
+    text-align: center;
+    font-weight: 400;
+  } 

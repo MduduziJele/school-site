@@ -1,0 +1,56 @@
+
+.label-section {
+  position: relative;
+  /* width: 100%; */
+  /* background-color: #f5f5f5; */
+}
+
+.label {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1117px;
+  /* width: 100%; */
+  
+  background-color: white; 
+}
+
+.introduction-exams {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.sub-topic {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.text {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .label {
+    padding: 5px;
+  }
+
+  .introduction-exams {
+    font-size: 20px; 
+    margin-top: 5px; 
+  }
+
+  .sub-topic {
+    font-size: 16px; 
+    margin-top: 3px;
+  }
+
+  .text {
+    font-size: 14px; 
+    margin: 3px 0; 
+  }
+}

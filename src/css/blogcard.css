@@ -1,0 +1,56 @@
+.blogcard {
+  border: 1px solid black;
+  width: 13rem;
+  height: 15rem;
+}
+
+.blogcard img {
+  width: 100%;
+  height: 35%;
+  object-fit: cover;
+}
+
+.blogcard__heading {
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
+  color: #743943;
+  font-size: 12px;
+}
+
+.blogcard hr {
+  width: 25%;
+  height: 0.3rem;
+  background-color: #743943;
+}
+
+.blogcard__content {
+  padding-left: 0.8rem;
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.blogcard__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.blogcard__buttons button {
+  width: 3rem;
+  height: 1.2rem;
+  font-size: 10px;
+  text-align: center;
+}
+
+.blogcard__buttons button:first-child {
+  background-color: #743943;
+  color: white;
+  border: 0px;
+}
+
+.blogcard__buttons button:nth-child(2) {
+    background-color: #C30000;
+    color: white;
+    border: 0px;
+  }

@@ -1,0 +1,54 @@
+.users {
+    width: 80%;
+    display: block;
+    float: right;
+    color: black;
+      
+}
+.users__container {
+   margin-top: 116px;
+   margin-inline-start: 100px;
+}
+.users h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.73px;
+    /* margin-top: 176px; */
+}
+.users button {
+    background: #743943;
+    width: 122px;
+    height: 39px;
+    padding: 10px,26px,10px,26px;
+    color: #fff;
+    border-style: none;
+    margin-right:200px;
+    align-content: flex-end;
+}
+.users__title__button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    
+}
+.users__heading {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.user__fullname__picture {
+    display: flex;
+}
+.users__details__roles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block: 82px;
+    align-items: center;
+}
+.user__fullname__picture {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.users__actions {
+    font-size:git24px;   
+}

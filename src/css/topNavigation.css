@@ -1,0 +1,27 @@
+.topNav a{
+    text-decoration: none;
+    color: #ffff;
+    padding-left: 50px;
+    font-size: 12px;
+}
+
+.topNav{
+    background-color: #743943;
+    padding: 16px;
+}
+
+.split{
+    float: right;
+    display: inline;
+}
+
+.btnSupport{
+    margin-left: 40px;
+    margin-right: 15px;
+    background: #CFD7DE;
+    padding:6px;
+    border-style: none;
+}
+
+
+
