@@ -1,7 +1,8 @@
 import { AiOutlineMenu, AiOutlineDown } from "react-icons/ai";
-import profilePicture from "../assets/me.jpg";
 
 export const PortalNavbar = () => {
+    const id =  sessionStorage.getItem("id")
+    const email = sessionStorage.getItem("email")
   return (
     <div className="navbar">
         <div className="navbar__container">
@@ -10,8 +11,8 @@ export const PortalNavbar = () => {
                     <AiOutlineMenu/>
                 </div>
                 <div className="navbar__profile">
-                    <img src= {profilePicture} className="navbar__profile-picture" alt='image'/>
-                    <p className="navbar__profile_name">Thabang Admore</p>
+                    <img src={`//localhost:8080/api/auth/user/image/${id}`} className="navbar__profile-picture" alt='image'/>
+                    <p className="navbar__profile_name">{email}</p>
                     <AiOutlineDown className="chevron-down"/>
                 </div>
             </div>

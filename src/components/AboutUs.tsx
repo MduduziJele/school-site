@@ -16,7 +16,7 @@ const AboutUs = () => {
       <div className="AboutUs-body">
         <div className="Mission-section">
           <div className="mission-image">
-          <img src={`//school-site-api-production.up.railway.app/api/auth/image/mission/1`} />
+          <img src={`http://localhost:8080/api/auth/image/mission/1`} />
           </div>
           <div className="Mission">
             <h3>Our Mission</h3>
@@ -40,7 +40,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="vision__image">
-            <img src={`//school-site-api-production.up.railway.app/api/auth/image/vision/1`} alt="" />
+            <img src={`//localhost:8080/api/auth/image/vision/1`} alt="" />
           </div>
           
         </div>

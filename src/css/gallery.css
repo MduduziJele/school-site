@@ -69,7 +69,9 @@
     .image__grid {
       grid-template-columns: 1fr !important;
 
-        }
+       /* Display one image column */
+      /* grid-template-rows: repeat(6, 1fr) !important; Adjust the number of rows as needed */
+    }
     .gallery {
       padding: 0rem 1rem 0rem 1rem;}
   }

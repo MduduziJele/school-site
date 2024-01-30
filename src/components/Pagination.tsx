@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { cardsData } from './CardData';
 import Card from './Card';
@@ -17,7 +18,7 @@ export const Pagination = () => {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const handleReadMoreClick = () => {
     navigate('/label');
   };

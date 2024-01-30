@@ -46,7 +46,7 @@ const AddNewUser: React.FC = () => {
     newUser.append("image", selectedImage)
     newUser.append("password", formData.password)
 
-    fetch(`//school-site-api-production.up.railway.app/api/auth/adduser`, {
+    fetch(`//localhost:8080/api/auth/adduser`, {
       method: "POST",
       headers: {
         'Authorization': `Bearer jwtCookie=${sessionStorage.getItem("token")}`
@@ -74,7 +74,6 @@ const AddNewUser: React.FC = () => {
     <div className="adduser">
       <form className="adduser__form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="image">Image:</label>
           <input
             type="file"
             id="image"
@@ -84,57 +83,57 @@ const AddNewUser: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
             id="firstName"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            placeholder="First Name"
             required
           />
         </div>
         <div>
-          <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
             id="lastName"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            placeholder="Last Name"
             required
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email"
             required
           />
         </div>
         <div>
-          <label htmlFor="mobileNumber">Mobile Number:</label>
           <input
             type="tel"
             id="mobileNumber"
             name="mobileNumber"
             value={formData.mobileNumber}
             onChange={handleChange}
+            placeholder="Mobile number"
             required
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Password"
             required
           />
         </div>

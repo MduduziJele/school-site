@@ -14,14 +14,12 @@
     "firebase": "^10.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "react-modal": "^3.16.1",
-    "react-router-dom": "^6.21.3"
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@types/react-modal": "^3.16.3",
     "@types/react-responsive-masonry": "^2.1.1",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
