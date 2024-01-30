@@ -15,7 +15,11 @@
 @import url("./css/aboutUsPortal.css");
 @import url("./css/adduser.css");
 @import url("./css/createpost.css");
-@Import url("./css/postDetails.css");
+@import url("./css/postDetails.css");
+@import url("./css/Update.css");
+@import url("./css/Delete.css");
+@import url("./css/users.css");
+
 
 /* reset */
 *,
