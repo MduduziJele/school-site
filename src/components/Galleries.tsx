@@ -10,7 +10,8 @@ const Galleries: React.FC = () => {
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [imagesPerPage] = useState<number>(21);
+  const [imagesPerPage] = useState<number>(20);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   useEffect(() => {
     fetchAllImages();
@@ -43,6 +44,14 @@ const Galleries: React.FC = () => {
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
+  const openImage = (image: GalleryImage) => {
+    setSelectedImage(image);
+  };
+
+  const closeImage = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="galleries">
       {error ? (
@@ -51,11 +60,19 @@ const Galleries: React.FC = () => {
         <>
           <div className="full-image__grid">
             {currentImages.map((image, id) => (
-              <div key={id} className="full-gallery__image">
+              <div key={id} className="full-gallery__image" onClick={() => openImage(image)}>
                 <img src={`http://localhost:8080/api/auth/galleries/${image.imagePath}`} alt={image.imagePath} />
               </div>
             ))}
           </div>
+          {selectedImage && (
+            <div className="image-modal">
+              <span className="close-button" onClick={closeImage}>
+                &times;
+              </span>
+              <img src={`http://localhost:8080/api/auth/galleries/${selectedImage.imagePath}`} alt={selectedImage.imagePath} />
+            </div>
+          )}
           <div className="gallery_pagination">
             <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
               Previous
