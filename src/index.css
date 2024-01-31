@@ -12,13 +12,11 @@
 @import url("./css/PortalSideNavbar.css");
 @import url("./css/login.css");
 @import url("./css/blogcard.css");
+@import url("./css/blogPortal.css");
 @import url("./css/aboutUsPortal.css");
 @import url("./css/adduser.css");
-@import url("./css/createpost.css");
-@import url("./css/postDetails.css");
-@import url("./css/Update.css");
-@import url("./css/Delete.css");
-@import url("./css/users.css");
+@import url("./css/galleryPortal.css");
+@import url("./css/galleries.css");
 
 
 /* reset */
