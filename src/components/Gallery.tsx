@@ -57,10 +57,9 @@ const Gallery: React.FC = () => {
           ))}
         </div>
       )}
-      <div className="gallery__button" onClick={handleSeeMoreClick}>
+      <div className="gallery__button" onClick={handleSeeMoreClick}/>;
         SEE MORE
       </div>
-    </div>
   );
 };
 
