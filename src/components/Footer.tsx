@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {BsFacebook} from 'react-icons/bs';
 import {FaTwitterSquare} from 'react-icons/fa';
 import {AiOutlineInstagram} from 'react-icons/ai'
+import axios from 'axios';
 
 const Footer : React.FC= () => {
+
+  const [contact, setContacts] = useState([]);
+
+  useEffect(() => {
+    loadContacts();
+  }, []);
+
+  const loadContacts = async () => {
+    const results = await axios.get(`http://localhost:8080/api/auth/contact/1`);
+    setContacts(results.data);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -21,9 +34,8 @@ const Footer : React.FC= () => {
         </div>
         <div className="contact">
           <p>CONTACT US</p>
-          <p>school@gmail.com</p>
-          <p>41 Juta Street Braamfontain</p>
-          <p>Johannesburg, 2001</p>
+          <p>{contact.school_email}</p>
+          <p>{contact.school_address}</p>
         </div>
       </div>
       <div className="footer-text">
