@@ -50,6 +50,11 @@
 .AboutUs-text p {
   padding: 1rem 0rem 1rem 0rem;
 }
+
+.AboutUs-body{
+  width: 85rem;
+}
+
 .Mission-section {
   display: flex;
   flex-direction: row;

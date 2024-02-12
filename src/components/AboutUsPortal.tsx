@@ -114,7 +114,7 @@ const AboutUsPortal = () => {
         console.log(jsonData);
         setaboutustext(jsonData.aboutustext);
         setmission(jsonData.mission);
-        setvision(jsonData.mission);
+        setvision(jsonData.vision);
       } catch (error) {
         console.log("Fetch error:", error);
       }
