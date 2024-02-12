@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 interface LoginFormProps {}
 
 const Login: React.FC<LoginFormProps> = () => {
-  
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
@@ -17,7 +15,7 @@ const Login: React.FC<LoginFormProps> = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({email: userEmail, password: userPassword}),
+      body: JSON.stringify({ email: userEmail, password: userPassword }),
     })
       .then((res) => {
         if (res.ok) {
@@ -27,6 +25,7 @@ const Login: React.FC<LoginFormProps> = () => {
         }
       })
       .then((data) => {
+
         sessionStorage.setItem("id", data.id)
         sessionStorage.setItem("token", data.jwtCookie.value)
         sessionStorage.setItem("email", data.email)
@@ -36,6 +35,34 @@ const Login: React.FC<LoginFormProps> = () => {
         console.error("Fetch error", error);
       });
   };
+  // const handleLogin = () => {
+  //   fetch(`http://localhost:8080/api/auth/signin`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ email: userEmail, password: userPassword }),
+  //   })
+  //     .then((res) => {
+  //       if (!res.ok) {
+  //         throw new Error(`HTTP error! Status: ${res.status}`);
+  //       }
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       if (data.jwtCookie && data.jwtCookie.value) {
+  //         sessionStorage.setItem("token", data.jwtCookie.value);
+  //         navigate("/portal");
+  //       } else {
+  //         // Handle the case where the token is missing in the response
+  //         console.error("JWT token is missing in the response");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // Handle network errors or server-side errors
+  //       console.error("Fetch error:", error.message);
+  //     });
+  // };
 
   return (
     <div className="login">

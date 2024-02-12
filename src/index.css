@@ -15,9 +15,11 @@
 @import url("./css/blogPortal.css");
 @import url("./css/aboutUsPortal.css");
 @import url("./css/adduser.css");
+@import url("./css/Update.css");
+@import url("./css/Delete.css");
+@import url("./css/users.css");
 @import url("./css/galleryPortal.css");
 @import url("./css/galleries.css");
-
 
 /* reset */
 *,
