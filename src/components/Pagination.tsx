@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { cardsData } from './CardData';
 import Card from './Card';

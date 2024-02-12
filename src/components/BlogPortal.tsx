@@ -11,15 +11,15 @@ const BlogPortal = () => {
         <button><Link to={"/portal/createpost"}>CREATE POST</Link></button>
       </div>
       <div className="blog__cards">
+        {/* <BlogCard />
         <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCard /> */}
       </div>
       <br></br>
       <div className="blog__cards">
+        {/* <BlogCard />
         <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCard /> */}
       </div>
       <div className="blog__buttons">
         <button>prev</button>

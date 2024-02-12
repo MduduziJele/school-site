@@ -1,32 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios, { AxiosResponse } from "axios";
+import { useNavigate } from "react-router-dom";
 
-const images = [
-  "./src/assets/IMG_8007.JPG",
-  "./src/assets/IMG_8135.JPG",
-  "./src/assets/IMG_8169.JPG",
-  "./src/assets/IMG_8722.JPG",
-  "./src/assets/IMG_8724.JPG",
-  "./src/assets/IMG_8726.JPG",
-  "./src/assets/IMG_8731.JPG",
-  "./src/assets/IMG_8006.JPG",
-  "./src/assets/IMG_8006.JPG",
-];
+interface GalleryImage {
+  id: number;
+  imagePath: string;
+}
 
 const Gallery: React.FC = () => {
-  const first8Images = images.slice(0, 8);
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchGalleryImages();
+  }, []);
+
+  const fetchGalleryImages = async () => {
+    try {
+      const response: AxiosResponse<GalleryImage[]> = await getImages();
+      setImages(response.data);
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data?.message || "An error occurred");
+      } else {
+        setError("An unexpected error occurred");
+      }
+    }
+  };
+
+  const getImages = async (): Promise<AxiosResponse<GalleryImage[]>> => {
+    try {
+      return await axios.get<GalleryImage[]>("http://localhost:8080/api/auth/galleryImages");
+    } catch (e) {
+      throw e;
+    }
+  };
+
+  const handleSeeMoreClick = () => {
+    navigate("/galleries");
+  };
 
   return (
-   <div className="gallery">
-    <div className="gallery__heading">
+    <div className="gallery">
+      <div className="gallery__heading">
         <h1>Gallery</h1>
+      </div>
+      {error ? (
+        <p>Error: {error}</p>
+      ) : (
+        <div className="image__grid">
+          {images.slice(0,8).map((image, id) => (
+            <div key={id} className="gallery__image">
+              <img src={`http://localhost:8080/api/auth/galleries/${image.imagePath}`} alt={image.imagePath} />
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="gallery__button" onClick={handleSeeMoreClick}>
+        SEE MORE
+      </div>
     </div>
-     <div className="image__grid">
-      {first8Images.map((image) => (
-        <img key={image} src={image} alt="Image" />
-      ))}
-    </div>
-    <button className="gallery__button">See More</button>
-   </div>
   );
 };
 

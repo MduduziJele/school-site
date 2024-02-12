@@ -13,6 +13,7 @@ import BlogPortal from "./components/BlogPortal";
 import GalleryPortal from "./components/GalleryPortal";
 import AddNewUser from "./components/AddNewUser";
 import { CreatePost } from "./components/CreatePost";
+import Galleries from "./components/Galleries";
 import Update from "./components/Update";
 import Delete from "./components/Delete";
 

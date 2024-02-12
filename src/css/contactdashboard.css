@@ -1,8 +1,8 @@
 .dashboard-contact {
     width: 80%;
     display: block;
-    float: right;
-    margin-top: 180px;
+    /* float: right; */
+    margin-top: 90px;
 }
 
 .dashboard-contact-container {

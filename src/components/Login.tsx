@@ -7,10 +7,10 @@ const Login: React.FC<LoginFormProps> = () => {
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  const [error] = useState<string | null>(null);
 
   const handleLogin = () => {
-    fetch(`http://localhost:8080/api/auth/signin`, {
+    fetch(`//localhost:8080/api/auth/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,8 +25,11 @@ const Login: React.FC<LoginFormProps> = () => {
         }
       })
       .then((data) => {
-        sessionStorage.setItem("token", data.jwtCookie.value);
-        if (data.jwtCookie) navigate("/portal");
+
+        sessionStorage.setItem("id", data.id)
+        sessionStorage.setItem("token", data.jwtCookie.value)
+        sessionStorage.setItem("email", data.email)
+        if(data.jwtCookie) navigate("/portal")
       })
       .catch((error) => {
         console.error("Fetch error", error);
